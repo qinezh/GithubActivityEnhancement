@@ -8,7 +8,7 @@ Using this chrome extension, you github home page will merge the default activit
 
 ### Load .crx file
 
-1. Download the .crx file from [Release page](https://github.com/qinezh/github-activity-enhancement/latest)
+1. Download the .crx file from [Release page](https://github.com/qinezh/github-activity-enhancement/release/latest)
 2. Drag and drop the .crx file onto the page chrome://extensions
 3. Click the Install button in the prompt at the bottom of the screen 
 
