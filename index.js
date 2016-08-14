@@ -1,9 +1,19 @@
 $(function () {
   var baseUrl = "https://github.com/";
+  insertNavItem("Trending", "https://github.com/trending");
+  insertNavItem("Stars", "https://github.com/stars");
   Promise.all([getSelfActivity(), getOthersActivity()]).then(mergeActivity).catch(function(error) {
     console.log(error);
   });
 
+// add nav item in github home page
+  function insertNavItem(name, link) {
+    var nav = $('ul.header-nav.left');
+    var item = $("<li class='header-nav-item'/>").append("<a class='header-nav-link' href='" + link + "'>" + name + "</a>" );
+    nav.append(item);
+  }
+
+// merge with person activities in github home page
   function mergeActivity(activityArr) {
     if (activityArr.length !== 2) {
       console.log("Error occurred when run mergeActivity, invalid parameter");
